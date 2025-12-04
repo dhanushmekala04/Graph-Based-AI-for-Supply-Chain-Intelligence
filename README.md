@@ -28,7 +28,6 @@ This project demonstrates expertise in:
 - **Data Pipeline Engineering**: ETL processes handling large-scale FMCG datasets
 - **Algorithm Design**: Custom multi-hop reasoning for relationship traversal
 
-**Timeline**: 6 months | **Technologies**: Python, Neo4j, Streamlit, Groq API, Sentence Transformers
 
 ---
 
