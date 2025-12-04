@@ -1,0 +1,1411 @@
+2025-12-04 13:23:30.195 | INFO     | __main__:initialize_graph:32 - 🚀 Initializing graph database...
+2025-12-04 13:23:30.195 | INFO     | __main__:initialize_graph:35 - Step 1: Data Ingestion
+2025-12-04 13:23:30.196 | INFO     | ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 13:23:30.292 | INFO     | ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 13:23:30.292 | INFO     | ingestion:clean_data:28 - Cleaning data...
+2025-12-04 13:23:30.299 | INFO     | ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 13:23:30.299 | INFO     | ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 13:23:30.302 | INFO     | ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 13:23:30.303 | INFO     | ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 13:23:31.700 | INFO     | ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 13:23:31.817 | INFO     | ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 13:23:31.818 | INFO     | __main__:initialize_graph:40 - Step 2: Graph Construction
+2025-12-04 13:23:31.818 | INFO     | graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 13:23:31.819 | WARNING  | graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 13:23:32.409 | INFO     | graph_bulider:clear_database:28 - Database cleared
+2025-12-04 13:23:32.409 | INFO     | graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 13:23:32.705 | INFO     | graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 13:23:32.706 | INFO     | graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 13:23:35.941 | INFO     | graph_bulider:create_warehouse_nodes:72 - ✅ Warehouse nodes created
+2025-12-04 13:23:35.942 | INFO     | graph_bulider:create_manager_nodes:76 - Creating 25000 manager nodes...
+2025-12-04 13:23:37.661 | INFO     | graph_bulider:create_manager_nodes:89 - ✅ Manager nodes and relationships created
+2025-12-04 13:23:37.661 | INFO     | graph_bulider:create_zone_hierarchy:93 - Creating zone hierarchy...
+2025-12-04 13:23:39.730 | INFO     | graph_bulider:create_zone_hierarchy:117 - ✅ Zone hierarchy created
+2025-12-04 13:23:39.731 | INFO     | graph_bulider:create_infrastructure_nodes:121 - Creating 25000 infrastructure nodes...
+2025-12-04 13:46:29.808 | INFO     | graph_bulider:create_infrastructure_nodes:147 - ✅ Infrastructure nodes created
+2025-12-04 13:46:29.810 | INFO     | graph_bulider:create_risk_event_nodes:151 - Creating 57969 risk event nodes...
+2025-12-04 13:46:36.370 | INFO     | graph_bulider:create_risk_event_nodes:173 - ✅ Risk event nodes created
+2025-12-04 13:46:36.371 | INFO     | graph_bulider:create_market_context_nodes:177 - Creating 25000 market context nodes...
+2025-12-04 13:46:39.304 | INFO     | graph_bulider:create_market_context_nodes:196 - ✅ Market context nodes created
+2025-12-04 13:46:39.305 | INFO     | graph_bulider:create_compliance_nodes:200 - Creating 25000 compliance nodes...
+2025-12-04 13:46:41.307 | INFO     | graph_bulider:create_compliance_nodes:218 - ✅ Compliance nodes created
+2025-12-04 13:46:41.443 | INFO     | graph_bulider:build_graph:244 - 
+📊 Graph Statistics:
+2025-12-04 13:46:41.618 | INFO     | graph_bulider:build_graph:246 -   RiskEvent: 57969
+2025-12-04 13:46:41.619 | INFO     | graph_bulider:build_graph:246 -   Warehouse: 25000
+2025-12-04 13:46:41.620 | INFO     | graph_bulider:build_graph:246 -   Manager: 25000
+2025-12-04 13:46:41.621 | INFO     | graph_bulider:build_graph:246 -   Infrastructure: 25000
+2025-12-04 13:46:41.621 | INFO     | graph_bulider:build_graph:246 -   MarketContext: 25000
+2025-12-04 13:46:41.622 | INFO     | graph_bulider:build_graph:246 -   Compliance: 25000
+2025-12-04 13:46:41.623 | INFO     | graph_bulider:build_graph:246 -   RegionalZone: 6
+2025-12-04 13:46:41.623 | INFO     | graph_bulider:build_graph:246 -   Zone: 4
+2025-12-04 13:46:41.624 | INFO     | graph_bulider:build_graph:248 - ✅ Graph construction completed!
+2025-12-04 13:46:41.625 | INFO     | __main__:initialize_graph:47 - ✅ Graph initialization completed!
+2025-12-04 13:46:41.666 | INFO     | __main__:main:147 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:46:41.667 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:51:14.783 | INFO     | __main__:main:147 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:51:14.784 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:51:15.406 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:51:22.989 | INFO     | __main__:run_demo_queries:110 - 
+============================================================
+2025-12-04 13:51:22.990 | INFO     | __main__:run_demo_queries:111 - 🎯 Running Demo Queries
+2025-12-04 13:51:22.990 | INFO     | __main__:run_demo_queries:112 - ============================================================
+2025-12-04 13:51:22.992 | INFO     | pipeline:close:349 - Pipeline closed
+2025-12-04 13:51:56.534 | INFO     | __main__:main:159 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:51:56.535 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:51:57.100 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:52:01.110 | INFO     | __main__:run_demo_queries:122 - 
+============================================================
+2025-12-04 13:52:01.111 | INFO     | __main__:run_demo_queries:123 - 🎯 Running Demo Queries
+2025-12-04 13:52:01.112 | INFO     | __main__:run_demo_queries:124 - ============================================================
+2025-12-04 13:52:01.113 | INFO     | pipeline:close:349 - Pipeline closed
+2025-12-04 13:53:08.887 | INFO     | __main__:main:159 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:53:08.887 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:53:09.429 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:53:12.950 | INFO     | __main__:run_demo_queries:122 - 
+============================================================
+2025-12-04 13:53:12.950 | INFO     | __main__:run_demo_queries:123 - 🎯 Running Demo Queries
+2025-12-04 13:53:12.951 | INFO     | __main__:run_demo_queries:124 - ============================================================
+2025-12-04 13:53:12.952 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 13:53:12.952 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:53:12.953 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 13:53:13.725 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:53:13.726 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:53:14.467 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score, 
+       COUNT(re) AS risk_event_count, 
+       i.has_temp_regulation AS temp_regulation, 
+       mc.competitor_count AS competitor_count, 
+       c.govt_checks_l3m AS govt_checks 
+ORDER BY w.risk_score DESC 
+LIMIT 5
+2025-12-04 13:53:14.468 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:53:14.469 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:53:35.634 | ERROR    | executor:execute_query:40 - Query execution failed: Unable to retrieve routing information
+2025-12-04 13:53:35.635 | ERROR    | executor:execute_query:41 - Query: MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score, 
+       COUNT(re) AS risk_event_count, 
+       i.has_temp_regulation AS temp_regulation, 
+       mc.competitor_count AS competitor_count, 
+       c.govt_checks_l3m AS govt_checks 
+ORDER BY w.risk_score DESC 
+LIMIT 5
+2025-12-04 13:53:35.635 | INFO     | pipeline:close:349 - Pipeline closed
+2025-12-04 13:54:35.864 | INFO     | __main__:main:159 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:54:35.865 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:54:36.428 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:54:39.752 | INFO     | __main__:run_demo_queries:122 - 
+============================================================
+2025-12-04 13:54:39.753 | INFO     | __main__:run_demo_queries:123 - 🎯 Running Demo Queries
+2025-12-04 13:54:39.753 | INFO     | __main__:run_demo_queries:124 - ============================================================
+2025-12-04 13:54:39.755 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 13:54:39.755 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:54:39.756 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 13:54:40.250 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:54:40.251 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:54:40.686 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score, 
+       COUNT(re) AS risk_event_count, 
+       i.has_temp_regulation AS temp_regulation, 
+       mc.competitor_count AS competitor_count, 
+       c.govt_checks_l3m AS govt_checks 
+ORDER BY w.risk_score DESC 
+LIMIT 5
+2025-12-04 13:54:40.686 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:54:40.687 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:54:42.123 | INFO     | executor:execute_query:36 - Query returned 5 results
+2025-12-04 13:54:42.124 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:54:42.261 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 13:54:42.262 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:54:42.380 | INFO     | executor:execute_query:36 - Query returned 12 results
+2025-12-04 13:54:42.381 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 13:54:42.381 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 13:54:45.181 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 13:54:45.182 | INFO     | pipeline:process_query:103 - ✅ Query processed in 5.43 seconds
+2025-12-04 13:54:45.184 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses are in flood-prone areas without flood protection?
+============================================================
+2025-12-04 13:54:45.184 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:54:45.185 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses are in flood-prone areas without flood protection?
+2025-12-04 13:54:45.403 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:54:45.404 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:54:46.020 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COUNT(DISTINCT (:RiskEvent {event_type: 'Flood'})-[:EXPERIENCED]->(w)) AS flood_risk_count
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    flood_risk_count AS flood_risk_count
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:54:46.020 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:54:46.021 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:54:46.097 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:54:46.098 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COUNT(DISTINCT (:RiskEvent {event_type: 'Flood'})-[:EXPERIENCED]->(w)) AS flood_risk_count
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    flood_risk_count AS flood_risk_count
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:54:46.099 | INFO     | pipeline:close:349 - Pipeline closed
+2025-12-04 13:56:46.169 | INFO     | __main__:main:159 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:56:46.170 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:56:46.777 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:56:52.196 | INFO     | __main__:run_demo_queries:122 - 
+============================================================
+2025-12-04 13:56:52.197 | INFO     | __main__:run_demo_queries:123 - 🎯 Running Demo Queries
+2025-12-04 13:56:52.197 | INFO     | __main__:run_demo_queries:124 - ============================================================
+2025-12-04 13:56:52.198 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 13:56:52.198 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:56:52.199 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 13:56:52.616 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:56:52.616 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:56:53.048 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score, 
+       COUNT(re) AS risk_event_count, 
+       i.has_temp_regulation AS temp_regulation, 
+       mc.competitor_count AS competitor_count, 
+       c.govt_checks_l3m AS govt_checks 
+ORDER BY w.risk_score DESC 
+LIMIT 5
+2025-12-04 13:56:53.048 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:56:53.049 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:56:54.113 | INFO     | executor:execute_query:36 - Query returned 5 results
+2025-12-04 13:56:54.113 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:56:54.201 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 13:56:54.202 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:56:54.272 | INFO     | executor:execute_query:36 - Query returned 12 results
+2025-12-04 13:56:54.273 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 13:56:54.273 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 13:56:57.044 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 13:56:57.045 | INFO     | pipeline:process_query:103 - ✅ Query processed in 4.85 seconds
+2025-12-04 13:56:57.045 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses are in flood-prone areas without flood protection?
+============================================================
+2025-12-04 13:56:57.046 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:56:57.046 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses are in flood-prone areas without flood protection?
+2025-12-04 13:56:57.396 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:56:57.397 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:56:58.307 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COUNT(DISTINCT (:RiskEvent {event_type: 'Flood'})-[:EXPERIENCED]->(w)) AS flood_risk_count
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    flood_risk_count AS flood_risk_count
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:56:58.307 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:56:58.307 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:56:58.495 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:56:58.496 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COUNT(DISTINCT (:RiskEvent {event_type: 'Flood'})-[:EXPERIENCED]->(w)) AS flood_risk_count
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    flood_risk_count AS flood_risk_count
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:56:58.497 | INFO     | pipeline:close:349 - Pipeline closed
+2025-12-04 13:58:34.121 | INFO     | __main__:main:147 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:58:34.122 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:58:34.694 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:58:37.537 | INFO     | __main__:run_demo_queries:110 - 
+============================================================
+2025-12-04 13:58:37.538 | INFO     | __main__:run_demo_queries:111 - 🎯 Running Demo Queries
+2025-12-04 13:58:37.539 | INFO     | __main__:run_demo_queries:112 - ============================================================
+2025-12-04 13:58:37.541 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 13:58:37.541 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:58:37.542 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 13:58:37.973 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:58:37.973 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:58:38.310 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score
+ORDER BY w.risk_score DESC
+LIMIT 5
+2025-12-04 13:58:38.310 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:58:38.310 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:38.902 | INFO     | executor:execute_query:36 - Query returned 5 results
+2025-12-04 13:58:38.903 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:38.955 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 13:58:38.956 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:39.005 | INFO     | executor:execute_query:36 - Query returned 12 results
+2025-12-04 13:58:39.006 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 13:58:39.006 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 13:58:41.273 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 13:58:41.273 | INFO     | pipeline:process_query:103 - ✅ Query processed in 3.73 seconds
+2025-12-04 13:58:41.275 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses are in flood-prone areas without flood protection?
+============================================================
+2025-12-04 13:58:41.276 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:58:41.276 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses are in flood-prone areas without flood protection?
+2025-12-04 13:58:41.511 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:58:41.512 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:58:42.120 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COLLECT(DISTINCT i.is_flood_proof) AS flood_protection
+WHERE NULL IN flood_protection OR SIZE(flood_protection) = 0
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = TRUE
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    m.is_flood_impacted AS is_flood_impacted
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:58:42.121 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:58:42.122 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:42.220 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:58:42.221 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, COLLECT(DISTINCT i.is_flood_proof) AS flood_protection
+WHERE NULL IN flood_protection OR SIZE(flood_protection) = 0
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = TRUE
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    m.is_flood_impacted AS is_flood_impacted
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 13:58:42.225 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Compare risk levels across different zones
+============================================================
+2025-12-04 13:58:42.225 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:58:42.226 | INFO     | query_generator:understand_query:23 - Understanding query: Compare risk levels across different zones
+2025-12-04 13:58:42.590 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:58:42.590 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:58:43.247 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:PART_OF]->(z:Zone)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+RETURN 
+    z.zone_name AS ZoneName, 
+    AVG(w.risk_score) AS AverageRiskScore, 
+    COUNT(DISTINCT re.event_type) AS NumberOfRiskEvents
+WHERE w.risk_score IS NOT NULL
+GROUP BY z.zone_name
+ORDER BY AverageRiskScore DESC
+LIMIT 10
+2025-12-04 13:58:43.248 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:58:43.250 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:43.342 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:58:43.343 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:PART_OF]->(z:Zone)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+RETURN 
+    z.zone_name AS ZoneName, 
+    AVG(w.risk_score) AS AverageRiskScore, 
+    COUNT(DISTINCT re.event_type) AS NumberOfRiskEvents
+WHERE w.risk_score IS NOT NULL
+GROUP BY z.zone_name
+ORDER BY AverageRiskScore DESC
+LIMIT 10
+2025-12-04 13:58:43.345 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: What warehouses have had the most breakdowns?
+============================================================
+2025-12-04 13:58:43.346 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:58:43.346 | INFO     | query_generator:understand_query:23 - Understanding query: What warehouses have had the most breakdowns?
+2025-12-04 13:58:43.746 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:58:43.747 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:58:44.091 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.event_type = 'breakdown'
+WITH w, COUNT(re) AS breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id AS warehouse_id, w.location_type AS location_type, breakdown_count AS total_breakdowns
+LIMIT 10
+2025-12-04 13:58:44.091 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:58:44.092 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:44.156 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:58:44.157 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.event_type = 'breakdown'
+WITH w, COUNT(re) AS breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id AS warehouse_id, w.location_type AS location_type, breakdown_count AS total_breakdowns
+LIMIT 10
+2025-12-04 13:58:44.160 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me warehouses with poor infrastructure in high-competitor markets
+============================================================
+2025-12-04 13:58:44.160 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:58:44.160 | INFO     | query_generator:understand_query:23 - Understanding query: Show me warehouses with poor infrastructure in high-competitor markets
+2025-12-04 13:58:44.536 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:58:44.536 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:58:45.119 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:OPERATES_IN]->(m:MarketContext),
+      (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE m.competitor_count > 5 AND (i.has_temp_regulation = FALSE OR i.has_electric_backup = FALSE OR i.is_flood_proof = FALSE)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+RETURN 
+    w.warehouse_id AS warehouse_id,
+    w.location_type AS location_type,
+    m.competitor_count AS competitor_count,
+    i.has_temp_regulation AS temp_regulation,
+    i.has_electric_backup AS electric_backup,
+    i.is_flood_proof AS flood_proof,
+    COUNT(re) AS risk_event_count,
+    w.risk_score AS risk_score
+ORDER BY m.competitor_count DESC, w.risk_score DESC
+LIMIT 10
+2025-12-04 13:58:45.120 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:58:45.120 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:58:45.193 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:58:45.194 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:OPERATES_IN]->(m:MarketContext),
+      (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE m.competitor_count > 5 AND (i.has_temp_regulation = FALSE OR i.has_electric_backup = FALSE OR i.is_flood_proof = FALSE)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+RETURN 
+    w.warehouse_id AS warehouse_id,
+    w.location_type AS location_type,
+    m.competitor_count AS competitor_count,
+    i.has_temp_regulation AS temp_regulation,
+    i.has_electric_backup AS electric_backup,
+    i.is_flood_proof AS flood_proof,
+    COUNT(re) AS risk_event_count,
+    w.risk_score AS risk_score
+ORDER BY m.competitor_count DESC, w.risk_score DESC
+LIMIT 10
+2025-12-04 13:58:45.197 | INFO     | pipeline:close:361 - Pipeline closed
+2025-12-04 13:59:29.991 | INFO     | __main__:main:148 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 13:59:29.992 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 13:59:30.565 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 13:59:33.239 | INFO     | __main__:run_interactive_mode:54 - 
+============================================================
+2025-12-04 13:59:33.240 | INFO     | __main__:run_interactive_mode:55 - 🤖 GraphRAG Interactive Mode
+2025-12-04 13:59:33.240 | INFO     | __main__:run_interactive_mode:56 - ============================================================
+2025-12-04 13:59:50.417 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: "What warehouses have had the most breakdowns in the last 3 months?",
+============================================================
+2025-12-04 13:59:50.419 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 13:59:50.419 | INFO     | query_generator:understand_query:23 - Understanding query: "What warehouses have had the most breakdowns in the last 3 months?",
+2025-12-04 13:59:51.133 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 13:59:51.133 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 13:59:51.691 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.time_period >= date() - duration('P3M')
+WITH w, COUNT(re) as breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id as warehouse_id, w.location_type as location_type, breakdown_count as total_breakdowns
+LIMIT 10
+2025-12-04 13:59:51.692 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 13:59:51.693 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 13:59:52.178 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 13:59:52.179 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.time_period >= date() - duration('P3M')
+WITH w, COUNT(re) as breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id as warehouse_id, w.location_type as location_type, breakdown_count as total_breakdowns
+LIMIT 10
+2025-12-04 14:00:24.976 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 14:00:24.977 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:00:24.977 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 14:00:25.434 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:00:25.435 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:00:25.772 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score
+ORDER BY w.risk_score DESC
+LIMIT 5
+2025-12-04 14:00:25.773 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:00:25.773 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:00:26.052 | INFO     | executor:execute_query:36 - Query returned 5 results
+2025-12-04 14:00:26.053 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:00:26.094 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 14:00:26.095 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:00:26.137 | INFO     | executor:execute_query:36 - Query returned 12 results
+2025-12-04 14:00:26.138 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 14:00:26.139 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 14:00:28.251 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 14:00:28.252 | INFO     | pipeline:process_query:103 - ✅ Query processed in 3.28 seconds
+2025-12-04 14:09:30.633 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which managers have the best performance?
+============================================================
+2025-12-04 14:09:30.634 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:09:30.635 | INFO     | query_generator:understand_query:23 - Understanding query: Which managers have the best performance?
+2025-12-04 14:09:31.226 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:09:31.227 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:09:32.034 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (m:Manager)-[:MANAGES]->(w:Warehouse)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WITH m, 
+     COUNT(DISTINCT re) AS risk_events_count, 
+     AVG(c.govt_checks_l3m) AS avg_govt_checks, 
+     AVG(i.has_temp_regulation) AS avg_temp_regulation, 
+     w.product_shipped_tons AS product_shipped_tons
+WITH m, 
+     risk_events_count, 
+     avg_govt_checks, 
+     avg_temp_regulation, 
+     SUM(product_shipped_tons) AS total_product_shipped_tons
+ORDER BY total_product_shipped_tons DESC
+LIMIT 10
+RETURN m.manager_id AS manager_id, 
+       total_product_shipped_tons AS total_product_shipped_tons, 
+       risk_events_count AS risk_events_count, 
+       avg_govt_checks AS avg_govt_checks, 
+       avg_temp_regulation AS avg_temp_regulation
+2025-12-04 14:09:32.035 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:09:32.036 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:09:32.205 | ERROR    | executor:execute_query:40 - Query execution failed: Unable to retrieve routing information
+2025-12-04 14:09:32.205 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (m:Manager)-[:MANAGES]->(w:Warehouse)
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent)
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WITH m, 
+     COUNT(DISTINCT re) AS risk_events_count, 
+     AVG(c.govt_checks_l3m) AS avg_govt_checks, 
+     AVG(i.has_temp_regulation) AS avg_temp_regulation, 
+     w.product_shipped_tons AS product_shipped_tons
+WITH m, 
+     risk_events_count, 
+     avg_govt_checks, 
+     avg_temp_regulation, 
+     SUM(product_shipped_tons) AS total_product_shipped_tons
+ORDER BY total_product_shipped_tons DESC
+LIMIT 10
+RETURN m.manager_id AS manager_id, 
+       total_product_shipped_tons AS total_product_shipped_tons, 
+       risk_events_count AS risk_events_count, 
+       avg_govt_checks AS avg_govt_checks, 
+       avg_temp_regulation AS avg_temp_regulation
+2025-12-04 14:10:13.220 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: What's the average risk score by location type?
+============================================================
+2025-12-04 14:10:13.221 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:10:13.221 | INFO     | query_generator:understand_query:23 - Understanding query: What's the average risk score by location type?
+2025-12-04 14:10:13.532 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:10:13.533 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:10:13.775 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)
+RETURN 
+    w.location_type AS location_type, 
+    AVG(w.risk_score) AS average_risk_score
+ORDER BY average_risk_score DESC
+2025-12-04 14:10:13.776 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:10:13.777 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:10:13.990 | ERROR    | executor:execute_query:40 - Query execution failed: Failed to read from defunct connection IPv4Address(('p-2dd2fd6d-57d4-0001.production-orch-0894.neo4j.io', 7687)) (ResolvedIPv4Address(('35.200.158.141', 7687)))
+2025-12-04 14:10:13.990 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)
+RETURN 
+    w.location_type AS location_type, 
+    AVG(w.risk_score) AS average_risk_score
+ORDER BY average_risk_score DESC
+2025-12-04 14:10:26.707 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses are in flood-prone areas without flood protection?
+============================================================
+2025-12-04 14:10:26.708 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:10:26.709 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses are in flood-prone areas without flood protection?
+2025-12-04 14:10:27.432 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:10:27.433 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:10:27.998 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, i
+MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    COALESCE(i.is_flood_proof, false) AS has_flood_protection,
+    m.is_flood_impacted AS is_flood_impacted
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 14:10:27.999 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:10:28.000 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:10:28.626 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 14:10:28.627 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:LOCATED_IN]->(:RegionalZone)-[:PART_OF]->(:Zone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT i.is_flood_proof OR i.is_flood_proof IS NULL
+WITH w, i
+MATCH (w)-[:OPERATES_IN]->(m:MarketContext)
+WHERE m.is_flood_impacted = true
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    COALESCE(i.is_flood_proof, false) AS has_flood_protection,
+    m.is_flood_impacted AS is_flood_impacted
+ORDER BY w.risk_score DESC
+LIMIT 10
+2025-12-04 14:10:41.281 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: What warehouses have had the most breakdowns in the last 3 months?
+============================================================
+2025-12-04 14:10:41.282 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:10:41.283 | INFO     | query_generator:understand_query:23 - Understanding query: What warehouses have had the most breakdowns in the last 3 months?
+2025-12-04 14:10:41.791 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:10:41.792 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:10:42.119 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.time_period >= date() - duration('P3M')
+WITH w, COUNT(re) as breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id, w.location_type, breakdown_count
+LIMIT 10
+2025-12-04 14:10:42.120 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:10:42.120 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:10:42.228 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 14:10:42.229 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent)
+WHERE re.time_period >= date() - duration('P3M')
+WITH w, COUNT(re) as breakdown_count
+ORDER BY breakdown_count DESC
+RETURN w.warehouse_id, w.location_type, breakdown_count
+LIMIT 10
+2025-12-04 14:11:08.163 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: What's the risk profile of warehouse WH_0001?
+============================================================
+2025-12-04 14:11:08.164 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:11:08.165 | INFO     | query_generator:understand_query:23 - Understanding query: What's the risk profile of warehouse WH_0001?
+2025-12-04 14:11:08.585 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:11:08.586 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:11:09.523 | INFO     | query_generator:generate_cypher:88 - Generated Cypher:
+cy
+MATCH (w:Warehouse {warehouse_id: 'WH_0001'})
+OPTIONAL MATCH (w)-[:MANAGES]-(m:Manager)
+OPTIONAL MATCH (w)-[:PART_OF]-(z:Zone)
+OPTIONAL MATCH (w)-[:LOCATED_IN]-(rz:RegionalZone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]-(i:Infrastructure)
+OPTIONAL MATCH (w)-[:EXPERIENCED]-(re:RiskEvent)
+OPTIONAL MATCH (w)-[:OPERATES_IN]-(mc:MarketContext)
+OPTIONAL MATCH (w)-[:SUBJECT_TO]-(c:Compliance)
+RETURN 
+    w.warehouse_id AS warehouse_id,
+    w.risk_score AS risk_score,
+    COUNT(re) AS risk_event_count,
+    AVG(re.severity) AS avg_risk_severity,
+    COUNT(DISTINCT i.infrastructure_id) AS infrastructure_count,
+    COUNT(DISTINCT mc.market_id) AS market_context_count,
+    COUNT(DISTINCT c.compliance_id) AS compliance_count,
+    m.manager_id AS manager_id,
+    z.zone_name AS zone_name,
+    rz.regional_zone_name AS regional_zone_name,
+    i.has_temp_regulation AS has_temp_regulation,
+    i.has_electric_backup AS has_electric_backup,
+    i.is_flood_proof AS is_flood_proof,
+    mc.competitor_count AS competitor_count,
+    mc.retail_shop_count AS retail_shop_count,
+    mc.distributor_count AS distributor_count,
+    mc.is_flood_impacted AS is_flood_impacted,
+    c.govt_checks_l3m AS govt_checks_l3m,
+    c.certificate_type AS certificate_type,
+    c.refill_requests_l3m AS refill_requests_l3m
+ORDER BY w.risk_score DESC
+LIMIT 1
+2025-12-04 14:11:09.524 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:11:09.525 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:11:09.865 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'cy': expected 'ALTER', 'ORDER BY', 'CALL', 'USING PERIODIC COMMIT', 'CREATE', 'LOAD CSV', 'START DATABASE', 'STOP DATABASE', 'DEALLOCATE', 'DELETE', 'DENY', 'DETACH', 'DROP', 'DRYRUN', 'FINISH', 'FOREACH', 'GRANT', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REALLOCATE', 'REMOVE', 'RENAME', 'RETURN', 'REVOKE', 'ENABLE SERVER', 'SET', 'SHOW', 'SKIP', 'TERMINATE', 'UNWIND', 'USE' or 'WITH' (line 1, column 1 (offset: 0))
+"cy"
+ ^}
+2025-12-04 14:11:09.866 | ERROR    | executor:execute_query:41 - Query: cy
+MATCH (w:Warehouse {warehouse_id: 'WH_0001'})
+OPTIONAL MATCH (w)-[:MANAGES]-(m:Manager)
+OPTIONAL MATCH (w)-[:PART_OF]-(z:Zone)
+OPTIONAL MATCH (w)-[:LOCATED_IN]-(rz:RegionalZone)
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]-(i:Infrastructure)
+OPTIONAL MATCH (w)-[:EXPERIENCED]-(re:RiskEvent)
+OPTIONAL MATCH (w)-[:OPERATES_IN]-(mc:MarketContext)
+OPTIONAL MATCH (w)-[:SUBJECT_TO]-(c:Compliance)
+RETURN 
+    w.warehouse_id AS warehouse_id,
+    w.risk_score AS risk_score,
+    COUNT(re) AS risk_event_count,
+    AVG(re.severity) AS avg_risk_severity,
+    COUNT(DISTINCT i.infrastructure_id) AS infrastructure_count,
+    COUNT(DISTINCT mc.market_id) AS market_context_count,
+    COUNT(DISTINCT c.compliance_id) AS compliance_count,
+    m.manager_id AS manager_id,
+    z.zone_name AS zone_name,
+    rz.regional_zone_name AS regional_zone_name,
+    i.has_temp_regulation AS has_temp_regulation,
+    i.has_electric_backup AS has_electric_backup,
+    i.is_flood_proof AS is_flood_proof,
+    mc.competitor_count AS competitor_count,
+    mc.retail_shop_count AS retail_shop_count,
+    mc.distributor_count AS distributor_count,
+    mc.is_flood_impacted AS is_flood_impacted,
+    c.govt_checks_l3m AS govt_checks_l3m,
+    c.certificate_type AS certificate_type,
+    c.refill_requests_l3m AS refill_requests_l3m
+ORDER BY w.risk_score DESC
+LIMIT 1
+2025-12-04 14:12:15.436 | INFO     | pipeline:close:361 - Pipeline closed
+2025-12-04 14:15:24.342 | INFO     | __main__:main:148 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 14:15:24.343 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 14:15:24.915 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 14:15:30.291 | INFO     | __main__:run_demo_queries:111 - 
+============================================================
+2025-12-04 14:15:30.292 | INFO     | __main__:run_demo_queries:112 - 🎯 Running Demo Queries
+2025-12-04 14:15:30.292 | INFO     | __main__:run_demo_queries:113 - ============================================================
+2025-12-04 14:15:30.293 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 5 highest risk warehouses
+============================================================
+2025-12-04 14:15:30.294 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:15:30.294 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 5 highest risk warehouses
+2025-12-04 14:15:30.858 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:15:30.859 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:15:30.860 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:15:30.861 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses are in flood-prone areas without flood protection?
+============================================================
+2025-12-04 14:15:30.861 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:15:30.862 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses are in flood-prone areas without flood protection?
+2025-12-04 14:15:31.443 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:15:31.444 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:15:31.444 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:15:31.447 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Compare risk levels across different zones
+============================================================
+2025-12-04 14:15:31.447 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:15:31.448 | INFO     | query_generator:understand_query:23 - Understanding query: Compare risk levels across different zones
+2025-12-04 14:15:32.030 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:15:32.031 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:15:32.031 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:15:32.032 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: What warehouses have had the most breakdowns?
+============================================================
+2025-12-04 14:15:32.033 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:15:32.033 | INFO     | query_generator:understand_query:23 - Understanding query: What warehouses have had the most breakdowns?
+2025-12-04 14:15:32.343 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:15:32.344 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:15:32.345 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:15:32.347 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me warehouses with poor infrastructure in high-competitor markets
+============================================================
+2025-12-04 14:15:32.347 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:15:32.347 | INFO     | query_generator:understand_query:23 - Understanding query: Show me warehouses with poor infrastructure in high-competitor markets
+2025-12-04 14:15:32.778 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:15:32.779 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:15:32.780 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:15:32.781 | INFO     | pipeline:close:361 - Pipeline closed
+2025-12-04 14:16:51.099 | INFO     | __main__:main:148 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 14:16:51.100 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 14:16:51.654 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 14:16:54.667 | INFO     | __main__:run_interactive_mode:54 - 
+============================================================
+2025-12-04 14:16:54.668 | INFO     | __main__:run_interactive_mode:55 - 🤖 GraphRAG Interactive Mode
+2025-12-04 14:16:54.668 | INFO     | __main__:run_interactive_mode:56 - ============================================================
+2025-12-04 14:17:05.187 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me high-risk warehouses in flood zones
+============================================================
+2025-12-04 14:17:05.188 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:17:05.188 | INFO     | query_generator:understand_query:23 - Understanding query: Show me high-risk warehouses in flood zones
+2025-12-04 14:17:05.979 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:17:05.981 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:17:05.981 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:20:26.540 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: 1& C:/Python313/python.exe c:/Users/HP/OneDrive/Desktop/graphrag/scr/main.py
+============================================================
+2025-12-04 14:20:26.541 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:20:26.542 | INFO     | query_generator:understand_query:23 - Understanding query: 1& C:/Python313/python.exe c:/Users/HP/OneDrive/Desktop/graphrag/scr/main.py
+2025-12-04 14:20:27.584 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:20:27.585 | INFO     | query_generator:generate_cypher:63 - Generating Cypher query...
+2025-12-04 14:20:27.586 | ERROR    | pipeline:process_query:107 - ❌ Pipeline error: 'complexity'
+2025-12-04 14:20:39.832 | INFO     | __main__:main:148 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 14:20:39.832 | INFO     | pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 14:20:40.425 | INFO     | pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 14:20:43.341 | INFO     | __main__:run_interactive_mode:54 - 
+============================================================
+2025-12-04 14:20:43.342 | INFO     | __main__:run_interactive_mode:55 - 🤖 GraphRAG Interactive Mode
+2025-12-04 14:20:43.343 | INFO     | __main__:run_interactive_mode:56 - ============================================================
+2025-12-04 14:21:03.330 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: "What's the risk profile of warehouse WH_0001?"
+============================================================
+2025-12-04 14:21:03.331 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:21:03.332 | INFO     | query_generator:understand_query:23 - Understanding query: "What's the risk profile of warehouse WH_0001?"
+2025-12-04 14:21:03.818 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:21:03.820 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:21:04.441 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse {warehouse_id: 'WH_0001'}) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext) 
+RETURN 
+  w.warehouse_id AS warehouse_id, 
+  w.risk_score AS risk_score, 
+  collect(DISTINCT type(re)) AS risk_event_types, 
+  i.has_temp_regulation AS has_temp_regulation, 
+  i.has_electric_backup AS has_electric_backup, 
+  i.is_flood_proof AS is_flood_proof, 
+  c.govt_checks_l3m AS govt_checks_l3m, 
+  m.competitor_count AS competitor_count, 
+  m.retail_shop_count AS retail_shop_count, 
+  m.distributor_count AS distributor_count, 
+  m.is_flood_impacted AS is_flood_impacted 
+ORDER BY w.risk_score DESC 
+LIMIT 1
+2025-12-04 14:21:04.441 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:21:04.442 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:21:04.963 | ERROR    | executor:execute_query:40 - Query execution failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Type mismatch: expected Relationship but was Node (line 9, column 25 (offset: 362))
+"  collect(DISTINCT type(re)) AS risk_event_types,"
+                         ^}
+2025-12-04 14:21:04.963 | ERROR    | executor:execute_query:41 - Query: MATCH (w:Warehouse {warehouse_id: 'WH_0001'}) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(m:MarketContext) 
+RETURN 
+  w.warehouse_id AS warehouse_id, 
+  w.risk_score AS risk_score, 
+  collect(DISTINCT type(re)) AS risk_event_types, 
+  i.has_temp_regulation AS has_temp_regulation, 
+  i.has_electric_backup AS has_electric_backup, 
+  i.is_flood_proof AS is_flood_proof, 
+  c.govt_checks_l3m AS govt_checks_l3m, 
+  m.competitor_count AS competitor_count, 
+  m.retail_shop_count AS retail_shop_count, 
+  m.distributor_count AS distributor_count, 
+  m.is_flood_impacted AS is_flood_impacted 
+ORDER BY w.risk_score DESC 
+LIMIT 1
+2025-12-04 14:21:21.348 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: "What are the most common risk events in the last 3 months?
+============================================================
+2025-12-04 14:21:21.349 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:21:21.349 | INFO     | query_generator:understand_query:23 - Understanding query: "What are the most common risk events in the last 3 months?
+2025-12-04 14:21:21.881 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:21:21.882 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:21:22.427 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent) 
+WHERE re.time_period >= date() - duration('P3M') 
+RETURN re.event_type AS risk_event, COUNT(re) AS frequency 
+ORDER BY frequency DESC;
+2025-12-04 14:21:22.428 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:21:22.428 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:21:22.999 | INFO     | executor:execute_query:36 - Query returned 0 results
+2025-12-04 14:21:36.844 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: how me the top 10 high-risk warehouses
+============================================================
+2025-12-04 14:21:36.845 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:21:36.846 | INFO     | query_generator:understand_query:23 - Understanding query: how me the top 10 high-risk warehouses
+2025-12-04 14:21:37.335 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:21:37.336 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:21:37.561 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 14:21:37.563 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:21:37.563 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:21:37.698 | INFO     | executor:execute_query:36 - Query returned 10 results
+2025-12-04 14:21:37.699 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:21:37.744 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 14:21:37.745 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:21:37.783 | INFO     | executor:execute_query:36 - Query returned 13 results
+2025-12-04 14:21:37.783 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 14:21:37.784 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 14:21:39.766 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 14:21:39.767 | INFO     | pipeline:process_query:103 - ✅ Query processed in 2.92 seconds
+2025-12-04 14:22:04.068 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Which warehouses have infrastructure vulnerabilities?
+============================================================
+2025-12-04 14:22:04.068 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:22:04.069 | INFO     | query_generator:understand_query:23 - Understanding query: Which warehouses have infrastructure vulnerabilities?
+2025-12-04 14:22:04.591 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:22:04.592 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:22:05.126 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE NOT (i.has_temp_regulation AND i.has_electric_backup AND i.is_flood_proof)
+RETURN w.warehouse_id AS warehouse_id, w.location_type AS location_type, w.risk_score AS risk_score, 
+       i.has_temp_regulation AS temp_regulation, i.has_electric_backup AS electric_backup, i.is_flood_proof AS flood_proof
+ORDER BY w.risk_score DESC
+LIMIT 100
+2025-12-04 14:22:05.126 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:22:05.127 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:05.315 | INFO     | executor:execute_query:36 - Query returned 100 results
+2025-12-04 14:22:05.317 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:05.356 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 14:22:05.359 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:05.398 | INFO     | executor:execute_query:36 - Query returned 12 results
+2025-12-04 14:22:05.399 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 14:22:05.399 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 14:22:07.843 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 14:22:07.844 | INFO     | pipeline:process_query:103 - ✅ Query processed in 3.78 seconds
+2025-12-04 14:22:17.891 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: "Find warehouses with flood risk but no flood protection"
+============================================================
+2025-12-04 14:22:17.892 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:22:17.892 | INFO     | query_generator:understand_query:23 - Understanding query: "Find warehouses with flood risk but no flood protection"
+2025-12-04 14:22:18.529 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:22:18.530 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:22:19.066 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse)-[:EXPERIENCED]->(re:RiskEvent {event_type: 'Flood'})
+WHERE re.severity > 0
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure)
+WHERE i.is_flood_proof = FALSE OR i.is_flood_proof IS NULL
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.location_type AS location_type, 
+    w.risk_score AS risk_score, 
+    re.severity AS flood_risk_severity
+ORDER BY w.risk_score DESC
+LIMIT 100
+2025-12-04 14:22:19.068 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:22:19.070 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:19.331 | INFO     | executor:execute_query:36 - Query returned 0 results
+2025-12-04 14:22:33.130 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Give me an overview of all warehouses"
+============================================================
+2025-12-04 14:22:33.131 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:22:33.132 | INFO     | query_generator:understand_query:23 - Understanding query: Give me an overview of all warehouses"
+2025-12-04 14:22:33.838 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:22:33.840 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:22:34.731 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:MANAGES]->(m:Manager) 
+OPTIONAL MATCH (w)-[:PART_OF]->(z:Zone) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]->(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]->(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]->(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]->(c:Compliance) 
+RETURN 
+  w.warehouse_id AS warehouse_id, 
+  w.capacity_size AS capacity_size, 
+  w.established_year AS established_year, 
+  w.owner_type AS owner_type, 
+  w.location_type AS location_type, 
+  w.distance_from_hub AS distance_from_hub, 
+  w.workers_count AS workers_count, 
+  w.product_shipped_tons AS product_shipped_tons, 
+  w.risk_score AS risk_score, 
+  m.manager_id AS manager_id, 
+  z.zone_name AS zone_name, 
+  i.has_temp_regulation AS has_temp_regulation, 
+  i.has_electric_backup AS has_electric_backup, 
+  i.is_flood_proof AS is_flood_proof, 
+  i.certificate_type AS infrastructure_certificate_type, 
+  re.event_type AS event_type, 
+  mc.competitor_count AS competitor_count, 
+  mc.retail_shop_count AS retail_shop_count, 
+  mc.distributor_count AS distributor_count, 
+  mc.is_flood_impacted AS is_flood_impacted, 
+  c.compliance_id AS compliance_id, 
+  c.govt_checks_l3m AS govt_checks_l3m, 
+  c.certificate_type AS compliance_certificate_type, 
+  c.refill_requests_l3m AS refill_requests_l3m 
+ORDER BY w.warehouse_id 
+LIMIT 1000
+2025-12-04 14:22:34.732 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:22:34.732 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:35.390 | INFO     | executor:execute_query:36 - Query returned 1000 results
+2025-12-04 14:22:35.392 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:35.433 | INFO     | executor:execute_query:36 - Query returned 8 results
+2025-12-04 14:22:35.434 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:22:35.474 | INFO     | executor:execute_query:36 - Query returned 5 results
+2025-12-04 14:22:35.476 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 14:22:35.477 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 14:22:38.232 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 14:22:38.233 | INFO     | pipeline:process_query:103 - ✅ Query processed in 5.10 seconds
+2025-12-04 14:23:40.747 | INFO     | pipeline:process_query:45 - 
+============================================================
+Processing query: Show me shipment volumes by location type"
+============================================================
+2025-12-04 14:23:40.748 | INFO     | pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:23:40.749 | INFO     | query_generator:understand_query:23 - Understanding query: Show me shipment volumes by location type"
+2025-12-04 14:23:41.428 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:23:41.429 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:23:41.631 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse)
+RETURN w.location_type AS location_type, COUNT(w) AS shipment_volumes
+ORDER BY shipment_volumes DESC
+2025-12-04 14:23:41.632 | INFO     | pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:23:41.633 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 14:23:41.791 | INFO     | executor:execute_query:36 - Query returned 2 results
+2025-12-04 14:23:41.792 | INFO     | pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 14:23:41.793 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 14:23:43.456 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 14:23:43.457 | INFO     | pipeline:process_query:103 - ✅ Query processed in 2.71 seconds
+2025-12-04 14:45:04.755 | INFO     | main:initialize_graph:33 - 🚀 Initializing graph database...
+2025-12-04 14:45:04.755 | INFO     | main:initialize_graph:36 - Step 1: Data Ingestion
+2025-12-04 14:45:04.756 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 14:45:04.824 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 14:45:04.825 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 14:45:04.832 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 14:45:04.833 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 14:45:04.835 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 14:45:04.836 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 14:45:08.558 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 14:45:08.864 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 14:45:08.865 | INFO     | main:initialize_graph:41 - Step 2: Graph Construction
+2025-12-04 14:45:08.865 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 14:45:08.865 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 14:45:12.794 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 14:45:12.795 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 14:45:13.732 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 14:45:13.734 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 14:45:18.734 | INFO     | main:initialize_graph:33 - 🚀 Initializing graph database...
+2025-12-04 14:45:18.735 | INFO     | main:initialize_graph:36 - Step 1: Data Ingestion
+2025-12-04 14:45:18.736 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 14:45:18.931 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 14:45:18.932 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 14:45:18.945 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 14:45:18.945 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 14:45:18.958 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 14:45:18.959 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 14:45:25.230 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 14:45:25.671 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 14:45:25.672 | INFO     | main:initialize_graph:41 - Step 2: Graph Construction
+2025-12-04 14:45:25.672 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 14:45:25.673 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 14:45:30.242 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 14:45:30.242 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 14:45:31.279 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 14:45:31.280 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 14:49:24.438 | INFO     | main:initialize_graph:33 - 🚀 Initializing graph database...
+2025-12-04 14:49:24.439 | INFO     | main:initialize_graph:36 - Step 1: Data Ingestion
+2025-12-04 14:49:24.440 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 14:49:24.631 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 14:49:24.631 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 14:49:24.648 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 14:49:24.649 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 14:49:24.662 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 14:49:24.663 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 14:49:29.740 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 14:49:30.092 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 14:49:30.092 | INFO     | main:initialize_graph:41 - Step 2: Graph Construction
+2025-12-04 14:49:30.093 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 14:49:30.094 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 14:49:41.126 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 14:49:41.127 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 14:49:41.681 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 14:49:41.682 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 14:49:52.367 | INFO     | main:initialize_graph:33 - 🚀 Initializing graph database...
+2025-12-04 14:49:52.368 | INFO     | main:initialize_graph:36 - Step 1: Data Ingestion
+2025-12-04 14:49:52.369 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 14:49:52.499 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 14:49:52.500 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 14:49:52.512 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 14:49:52.514 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 14:49:52.520 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 14:49:52.522 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 14:49:57.220 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 14:49:57.476 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 14:49:57.477 | INFO     | main:initialize_graph:41 - Step 2: Graph Construction
+2025-12-04 14:49:57.478 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 14:49:57.479 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 14:50:01.449 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 14:50:01.450 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 14:50:02.191 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 14:50:02.192 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 14:51:48.383 | INFO     | main:initialize_graph:33 - 🚀 Initializing graph database...
+2025-12-04 14:51:48.384 | INFO     | main:initialize_graph:36 - Step 1: Data Ingestion
+2025-12-04 14:51:48.385 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 14:51:48.575 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 14:51:48.576 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 14:51:48.593 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 14:51:48.594 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 14:51:48.606 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 14:51:48.607 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 14:51:53.673 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 14:51:53.942 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 14:51:53.943 | INFO     | main:initialize_graph:41 - Step 2: Graph Construction
+2025-12-04 14:51:53.944 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 14:51:53.944 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 14:51:56.952 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 14:51:56.954 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 14:51:57.636 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 14:51:57.637 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 14:56:08.615 | INFO     | __main__:main:151 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 14:56:08.617 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 14:56:09.294 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 14:56:12.398 | INFO     | __main__:run_interactive_mode:57 - 
+============================================================
+2025-12-04 14:56:12.399 | INFO     | __main__:run_interactive_mode:58 - 🤖 GraphRAG Interactive Mode
+2025-12-04 14:56:12.400 | INFO     | __main__:run_interactive_mode:59 - ============================================================
+2025-12-04 14:56:37.765 | INFO     | scr.pipeline:process_query:45 - 
+============================================================
+Processing query: & C:/Python313/python.exe c:/Users/HP/OneDrive/Desktop/graphrag/app.py
+============================================================
+2025-12-04 14:56:37.766 | INFO     | scr.pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 14:56:37.767 | INFO     | query_generator:understand_query:23 - Understanding query: & C:/Python313/python.exe c:/Users/HP/OneDrive/Desktop/graphrag/app.py
+2025-12-04 14:56:38.371 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 14:56:38.372 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 14:56:41.115 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+OPTIONAL MATCH (w)-[:MANAGES]-(m:Manager) 
+OPTIONAL MATCH (w)-[:PART_OF]-(z:Zone) 
+OPTIONAL MATCH (w)-[:HAS_INFRASTRUCTURE]-(i:Infrastructure) 
+OPTIONAL MATCH (w)-[:EXPERIENCED]-(re:RiskEvent) 
+OPTIONAL MATCH (w)-[:OPERATES_IN]-(mc:MarketContext) 
+OPTIONAL MATCH (w)-[:SUBJECT_TO]-(c:Compliance) 
+RETURN 
+    w.warehouse_id AS warehouse_id, 
+    w.capacity_size AS capacity_size, 
+    w.established_year AS established_year, 
+    w.owner_type AS owner_type, 
+    w.location_type AS location_type, 
+    w.distance_from_hub AS distance_from_hub, 
+    w.workers_count AS workers_count, 
+    w.product_shipped_tons AS product_shipped_tons, 
+    w.risk_score AS risk_score, 
+    m.manager_id AS manager_id, 
+    z.zone_name AS zone_name, 
+    i.has_temp_regulation AS has_temp_regulation, 
+    i.has_electric_backup AS has_electric_backup, 
+    i.is_flood_proof AS is_flood_proof, 
+    i.certificate_type AS infrastructure_certificate_type, 
+    re.event_type AS event_type, 
+    re.occurrence_count AS occurrence_count, 
+    re.severity AS severity, 
+    re.time_period AS time_period, 
+    mc.competitor_count AS competitor_count, 
+    mc.retail_shop_count AS retail_shop_count, 
+    mc.distributor_count AS distributor_count, 
+    mc.is_flood_impacted AS is_flood_impacted, 
+    c.govt_checks_l3m AS govt_checks_l3m, 
+    c.certificate_type AS compliance_certificate_type, 
+    c.refill_requests_l3m AS refill_requests_l3m 
+ORDER BY w.warehouse_id 
+LIMIT 100
+2025-12-04 14:56:41.116 | INFO     | scr.pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 14:56:41.116 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:00:21.578 | INFO     | main:initialize_graph:36 - 🚀 Initializing graph database...
+2025-12-04 15:00:21.579 | INFO     | main:initialize_graph:39 - Step 1: Data Ingestion
+2025-12-04 15:00:21.580 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 15:00:21.788 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 15:00:21.789 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 15:00:21.809 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 15:00:21.810 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 15:00:21.828 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 15:00:21.829 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 15:00:26.695 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 15:00:26.914 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 15:00:26.914 | INFO     | main:initialize_graph:44 - Step 2: Graph Construction
+2025-12-04 15:00:26.915 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 15:00:26.915 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 15:03:37.475 | INFO     | main:initialize_graph:36 - 🚀 Initializing graph database...
+2025-12-04 15:03:37.476 | INFO     | main:initialize_graph:39 - Step 1: Data Ingestion
+2025-12-04 15:03:37.477 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 15:03:37.622 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 15:03:37.624 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 15:03:37.639 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 15:03:37.639 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 15:03:37.647 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 15:03:37.648 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 15:03:43.074 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 15:03:43.473 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 15:03:43.474 | INFO     | main:initialize_graph:44 - Step 2: Graph Construction
+2025-12-04 15:03:43.475 | INFO     | scr.graph_bulider:build_graph:222 - 🏗️  Starting graph construction...
+2025-12-04 15:03:43.475 | WARNING  | scr.graph_bulider:clear_database:25 - Clearing database...
+2025-12-04 15:03:46.057 | INFO     | scr.graph_bulider:clear_database:28 - Database cleared
+2025-12-04 15:03:46.059 | INFO     | scr.graph_bulider:create_constraints:32 - Creating constraints and indexes...
+2025-12-04 15:03:46.269 | INFO     | scr.graph_bulider:create_constraints:48 - ✅ Constraints created
+2025-12-04 15:03:46.269 | INFO     | scr.graph_bulider:create_warehouse_nodes:52 - Creating 25000 warehouse nodes...
+2025-12-04 15:04:27.493 | INFO     | __main__:main:151 - 
+🚀 Starting GraphRAG Pipeline...
+2025-12-04 15:04:27.494 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 15:04:28.070 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 15:04:30.877 | INFO     | __main__:run_interactive_mode:57 - 
+============================================================
+2025-12-04 15:04:30.877 | INFO     | __main__:run_interactive_mode:58 - 🤖 GraphRAG Interactive Mode
+2025-12-04 15:04:30.878 | INFO     | __main__:run_interactive_mode:59 - ============================================================
+2025-12-04 15:09:55.924 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:09:58.758 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:09:58.763 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 15:10:00.079 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 15:10:08.104 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:10:08.109 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 15:10:08.274 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 15:10:08.276 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 15:10:08.298 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 15:10:08.299 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 15:10:08.315 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 15:10:08.316 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 15:10:12.524 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 15:10:12.811 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 15:10:21.932 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:10:26.986 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:10:50.628 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:10:50.829 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:10:50.843 | INFO     | scr.pipeline:process_query:45 - 
+============================================================
+Processing query:  "Show me the top 10 high-risk warehouses",
+============================================================
+2025-12-04 15:10:50.844 | INFO     | scr.pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 15:10:50.845 | INFO     | query_generator:understand_query:23 - Understanding query:  "Show me the top 10 high-risk warehouses",
+2025-12-04 15:10:51.980 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 15:10:51.980 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 15:10:52.258 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 15:10:52.258 | INFO     | scr.pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 15:10:52.259 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:11:00.640 | INFO     | executor:execute_query:36 - Query returned 10 results
+2025-12-04 15:11:00.641 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:11:01.044 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 15:11:01.045 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:11:01.243 | INFO     | executor:execute_query:36 - Query returned 13 results
+2025-12-04 15:11:01.244 | INFO     | scr.pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 15:11:01.245 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 15:11:03.509 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 15:11:03.510 | INFO     | scr.pipeline:process_query:103 - ✅ Query processed in 12.67 seconds
+2025-12-04 15:11:56.847 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:12:00.638 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:12:05.954 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:12:12.300 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:12:25.368 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:12:54.900 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:05.860 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:25.877 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:26.034 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:26.039 | INFO     | scr.pipeline:process_query:45 - 
+============================================================
+Processing query:    "Show me the top 10 high-risk warehouses",
+============================================================
+2025-12-04 15:13:26.040 | INFO     | scr.pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 15:13:26.041 | INFO     | query_generator:understand_query:23 - Understanding query:    "Show me the top 10 high-risk warehouses",
+2025-12-04 15:13:26.683 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 15:13:26.684 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 15:13:27.149 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 15:13:27.150 | INFO     | scr.pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 15:13:27.151 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:13:37.047 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:45.641 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:47.078 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:48.236 | ERROR    | executor:execute_query:40 - Query execution failed: Unable to retrieve routing information
+2025-12-04 15:13:48.238 | ERROR    | executor:execute_query:41 - Query: MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 15:13:49.719 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:13:57.875 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:14:09.363 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:14:09.517 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:14:09.526 | INFO     | scr.pipeline:process_query:45 - 
+============================================================
+Processing query: "Show me the top 10 high-risk warehouses",
+============================================================
+2025-12-04 15:14:09.527 | INFO     | scr.pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 15:14:09.528 | INFO     | query_generator:understand_query:23 - Understanding query: "Show me the top 10 high-risk warehouses",
+2025-12-04 15:14:10.378 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 15:14:10.378 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 15:14:10.844 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 15:14:10.844 | INFO     | scr.pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 15:14:10.845 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:14:11.803 | INFO     | executor:execute_query:36 - Query returned 10 results
+2025-12-04 15:14:11.805 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:14:12.090 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 15:14:12.091 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:14:12.211 | INFO     | executor:execute_query:36 - Query returned 13 results
+2025-12-04 15:14:12.212 | INFO     | scr.pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 15:14:12.212 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 15:14:14.481 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 15:14:14.481 | INFO     | scr.pipeline:process_query:103 - ✅ Query processed in 4.96 seconds
+2025-12-04 15:18:22.067 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:18:22.092 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:18:31.302 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:18:44.257 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:18:44.261 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 15:18:44.743 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 15:19:24.688 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:19:26.844 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:19:26.848 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 15:19:27.327 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 15:19:31.824 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:19:31.960 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:19:31.963 | INFO     | scr.pipeline:process_query:45 - 
+============================================================
+Processing query: Show me the top 10 high-risk warehouses"
+============================================================
+2025-12-04 15:19:31.963 | INFO     | scr.pipeline:process_query:49 - Step 1: Generating Cypher query...
+2025-12-04 15:19:31.963 | INFO     | query_generator:understand_query:23 - Understanding query: Show me the top 10 high-risk warehouses"
+2025-12-04 15:19:32.453 | ERROR    | query_generator:understand_query:46 - Failed to parse query understanding
+2025-12-04 15:19:32.454 | INFO     | query_generator:generate_cypher:83 - Generating Cypher query...
+2025-12-04 15:19:32.702 | INFO     | query_generator:generate_cypher:114 - Generated Cypher:
+MATCH (w:Warehouse) 
+RETURN w.warehouse_id AS warehouse_id, w.risk_score AS risk_score 
+ORDER BY w.risk_score DESC 
+LIMIT 10
+2025-12-04 15:19:32.703 | INFO     | scr.pipeline:process_query:59 - Step 2: Executing graph query...
+2025-12-04 15:19:32.704 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:19:33.313 | INFO     | executor:execute_query:36 - Query returned 10 results
+2025-12-04 15:19:33.314 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:19:33.369 | INFO     | executor:execute_query:36 - Query returned 19 results
+2025-12-04 15:19:33.369 | INFO     | executor:execute_query:29 - Executing query...
+2025-12-04 15:19:33.425 | INFO     | executor:execute_query:36 - Query returned 13 results
+2025-12-04 15:19:33.427 | INFO     | scr.pipeline:process_query:69 - Step 3: Generating answer...
+2025-12-04 15:19:33.428 | INFO     | answer_generator:generate_answer:64 - Generating answer...
+2025-12-04 15:19:36.497 | INFO     | answer_generator:generate_answer:87 - Answer generated successfully
+2025-12-04 15:19:36.498 | INFO     | scr.pipeline:process_query:103 - ✅ Query processed in 4.54 seconds
+2025-12-04 15:19:48.913 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:22:13.316 | INFO     | config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:22:13.326 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:22:14.518 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:22:14.526 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 15:22:14.619 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 15:22:14.620 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 15:22:14.634 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 15:22:14.634 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 15:22:14.641 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 15:22:14.642 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 15:22:16.221 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 15:22:16.352 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 15:22:53.943 | INFO     | config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:22:53.954 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:00.604 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:00.610 | INFO     | config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:00.624 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:07.732 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:07.738 | INFO     | scr.pipeline:__init__:21 - Initializing GraphRAG Pipeline...
+2025-12-04 15:25:08.209 | INFO     | scr.pipeline:__init__:25 - ✅ Pipeline initialized
+2025-12-04 15:25:12.890 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:25:12.893 | INFO     | scr.ingestion:load_data:21 - Loading data from C:\Users\HP\OneDrive\Desktop\graphrag\data\FMCG_data.csv
+2025-12-04 15:25:12.979 | INFO     | scr.ingestion:load_data:23 - Loaded 25000 warehouse records
+2025-12-04 15:25:12.980 | INFO     | scr.ingestion:clean_data:28 - Cleaning data...
+2025-12-04 15:25:12.993 | INFO     | scr.ingestion:clean_data:51 - Data cleaning completed
+2025-12-04 15:25:12.994 | INFO     | scr.ingestion:calculate_risk_scores:56 - Calculating risk scores...
+2025-12-04 15:25:13.000 | INFO     | scr.ingestion:calculate_risk_scores:80 - Risk scores calculated. Mean: 0.862
+2025-12-04 15:25:13.001 | INFO     | scr.ingestion:create_entity_extracts:85 - Extracting entities...
+2025-12-04 15:25:14.526 | INFO     | scr.ingestion:create_entity_extracts:200 - Extracted 207973 total entities
+2025-12-04 15:25:14.642 | INFO     | scr.ingestion:run_pipeline:215 - ✅ Ingestion pipeline completed
+2025-12-04 15:25:37.143 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully
+2025-12-04 15:30:22.475 | INFO     | scr.config:validate:65 - ✅ Configuration validated successfully

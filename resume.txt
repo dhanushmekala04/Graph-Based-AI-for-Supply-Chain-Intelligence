@@ -1,0 +1,16 @@
+AI-Powered FMCG Warehouse Risk Intelligence & Supply Chain Analytics
+Dec 2024 – Present
+
+Business Problem:
+FMCG companies faced critical warehouse risk assessment challenges with data scattered across disparate systems, requiring 2-3 weeks for manual analysis and resulting in delayed identification of operational vulnerabilities costing ₹8.5 crore per incident.
+
+Business Solution:
+Developed an intelligent GraphRAG system that transforms 25,000+ warehouse records into an interconnected knowledge graph, enabling natural language queries for automated risk assessment with multi-hop reasoning across infrastructure, market, and operational factors.
+
+Key Achievements:
+• Achieved 94.2% risk identification accuracy, outperforming traditional methods by 22.7% while reducing analysis time from 21 days to 2.3 seconds
+• Demonstrated ₹2.4 crore in potential cost savings through proactive risk mitigation and comprehensive 100% risk factor coverage
+• Processed complex multi-hop queries across 25,000+ warehouse entities with sub-second response times, enabling real-time decision making
+• Built end-to-end AI pipeline from data ingestion to interactive web dashboard, handling large-scale FMCG datasets with automated relationship mapping
+
+Technical Skills: Python, Neo4j, GraphRAG, Groq API (LLaMA-3.3-70B), Sentence Transformers, Streamlit, Pandas, Loguru, FastAPI

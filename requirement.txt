@@ -1,0 +1,19 @@
+# Core Dependencies
+pandas==2.1.0
+numpy==1.24.3
+python-dotenv==1.0.0
+
+# Graph Database
+neo4j==5.14.0
+
+# LLM & Embeddings
+groq==0.9.0
+sentence-transformers==2.2.2
+
+# Utilities
+loguru==0.7.2
+tqdm==4.66.1
+
+# Optional: Visualization
+matplotlib==3.8.0
+plotly==5.17.0
